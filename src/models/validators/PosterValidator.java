@@ -25,7 +25,7 @@ public class PosterValidator {
     }
     private static String _validateName(String name, Boolean name_duplicate_check_flag){
         if(name==null||name.equals("")){
-            return "アカウンイ名を入力してください。";
+            return "ユーザー名を入力してください。";
         }
         if(name_duplicate_check_flag){
             EntityManager em=DBUtil.createEntityManager();
