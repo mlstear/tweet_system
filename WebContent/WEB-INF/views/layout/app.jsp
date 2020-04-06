@@ -11,7 +11,19 @@
     <body>
     <div id ="wrapper">
       <div id ="header">
-        <h1>tweet システム</h1>
+         <div id="header_menu">
+            <h1><a href="<c:url value='/'/>">tweet システム</a></h1>&nbsp;&nbsp;&nbsp;
+            <c:if test="${sessionScope.login_poster !=null}">
+               <a href="<c:url value='/posters/index'/>">登録ユーザー 一覧</a>&nbsp;
+            </c:if>
+         </div>
+         <c:if test="${sessionScope.login_poster !=null}">
+            <div id="poster_name">
+               <c:out value="${sessionScope.login_poster.name}" />&nbsp;さん&nbsp;&nbsp;
+               <a href="<c:url value='/tweet/myIndex'/>">マイページ</a>&nbsp;&nbsp;&nbsp;
+               <a href="<c:out value='/logout'/>">ログアウト</a>
+            </div>
+         </c:if>
       </div>
       <div id="content">
         ${param.content}
