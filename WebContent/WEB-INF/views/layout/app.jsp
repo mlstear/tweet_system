@@ -20,8 +20,8 @@
          <c:if test="${sessionScope.login_poster !=null}">
             <div id="poster_name">
                <c:out value="${sessionScope.login_poster.name}" />&nbsp;さん&nbsp;&nbsp;
-               <a href="<c:url value='/tweet/myIndex'/>">マイページ</a>&nbsp;&nbsp;&nbsp;
-               <a href="<c:out value='/logout'/>">ログアウト</a>
+               <a href="<c:url value='/tweets/myIndex'/>">マイページ</a>&nbsp;&nbsp;&nbsp;
+               <a href="<c:url value='/logout' />">ログアウト</a>
             </div>
          </c:if>
       </div>
