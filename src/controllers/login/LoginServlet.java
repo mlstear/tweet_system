@@ -77,10 +77,10 @@ public class LoginServlet extends HttpServlet {
 
         if(!check_result){
             request.setAttribute("_token", request.getSession().getId());
-            request.setAttribute("haserror", true);
+            request.setAttribute("hasError", true);
             request.setAttribute("name", name);
 
-            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INf/views/login/login.jsp");
+            RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/views/login/login.jsp");
             rd.forward(request, response);
         }else{
             request.getSession().setAttribute("login_poster", p);

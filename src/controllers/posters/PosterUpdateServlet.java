@@ -77,6 +77,7 @@ public class PosterUpdateServlet extends HttpServlet {
                 em.getTransaction().commit();
                 em.close();
                 request.getSession().setAttribute("flush", "更新が完了しました。");
+                request.getSession().setAttribute("login_poster", p);
                 request.getSession().removeAttribute("poster_id");
 
                 response.sendRedirect(request.getContextPath()+"/posters/index");

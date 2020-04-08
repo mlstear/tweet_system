@@ -45,7 +45,7 @@ public class PosterDestroyServlet extends HttpServlet {
             request.getSession().setAttribute("flush", "削除が完了しました。");
             request.getSession().removeAttribute("poster_id");
 
-            response.sendRedirect(request.getContextPath()+"/posters/index");
+            response.sendRedirect(request.getContextPath()+"/logout");
 
         }
     }

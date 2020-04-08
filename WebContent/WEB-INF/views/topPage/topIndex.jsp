@@ -9,7 +9,7 @@
         </div>
      </c:if>
      <h2>最新のtweet</h2>
-     <p><a href="<c:out value='/tweets/new'/>">新規　投稿する</a></p>
+     <p><a href="<c:url value='/tweets/new'/>">新規　投稿する</a></p>
      <table id="tweet_list">
         <tbody>
           <c:forEach var="tweet" items="${tweets}" varStatus="status">
@@ -22,6 +22,7 @@
                <td class="tweet_content">
                   <pre><c:out value="${tweet.content}" /></pre>
                </td>
+
             </tr>
           </c:forEach>
         </tbody>

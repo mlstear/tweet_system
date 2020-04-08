@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/WEB-INF/views/layout/app.jsp">
   <c:param name="content">
-    <c:if test="hasError">
+    <c:if test="${hasError}">
        <div id="flush_error">
           ユーザー名かパスワードが間違っています。
        </div>
