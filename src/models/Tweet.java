@@ -18,6 +18,8 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name="getAllTweets",query="select t from Tweet as t order by t.id DESC"),
     @NamedQuery(name="getTweetsCount",query="select count(t) from Tweet as t"),
+    @NamedQuery(name = "getUserAllTweets",query = "SELECT t FROM Tweet AS t WHERE t.poster = :poster ORDER BY t.id DESC" ),
+    @NamedQuery(name = "getUserTweetsCount",query = "SELECT COUNT(t) FROM Tweet AS t WHERE t.poster = :poster"),
 
 })
 

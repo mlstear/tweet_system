@@ -42,6 +42,7 @@
            </c:choose>
         </c:forEach>
       </div>
+      <p><a href="<c:url value='/index.html'/>">トップページに戻る</a></p>
    </c:param>
 
 </c:import>

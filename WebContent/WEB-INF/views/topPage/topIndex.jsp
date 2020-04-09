@@ -8,8 +8,8 @@
            <c:out value="${flush}"></c:out>
         </div>
      </c:if>
-     <h2>最新のtweet</h2>
-     <p><a href="<c:url value='/tweets/new'/>">新規　投稿する</a></p>
+     <h2>TOPページ　最新のtweet</h2>
+     <p><a href="<c:url value='/tweets/new'/>">新規tweetを投稿する</a></p>
      <table id="tweet_list">
         <tbody>
           <c:forEach var="tweet" items="${tweets}" varStatus="status">
@@ -22,6 +22,12 @@
                <td class="tweet_content">
                   <pre><c:out value="${tweet.content}" /></pre>
                </td>
+               <td class="tweet_delete">
+                <c:if test="${sessionScope.login_poster.id==tweet.poster.id}">
+                  <a href="<c:url value='/tweets/show?id=${tweet.id}'/>">投稿を削除する</a>
+                </c:if>
+               </td>
+
 
             </tr>
           </c:forEach>

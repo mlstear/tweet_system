@@ -143,7 +143,8 @@ h1 a {
     font-size: 18px;
 }
 table#tweet_list{
-    table#tweet_list
+    border-collapse: separate;
+    border-spacing: 0px 60px;
 }
 table#tweet_list th {
     font-weight: bold;
@@ -166,4 +167,10 @@ table#tweet_list .tweet_content {
     margin: 4em 0;
     font-weight: bold;
     border: solid 1px #000000;
+}
+table#tweet_list .tweet_delete{
+    width: 10%;
+}
+p a{
+    font-size:18px;
 }
