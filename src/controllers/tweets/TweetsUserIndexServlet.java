@@ -59,7 +59,8 @@ public class TweetsUserIndexServlet extends HttpServlet {
         request.setAttribute("tweets", tweets);
         request.setAttribute("tweets_count", tweets_count);
         request.setAttribute("page", page);
-        request.getSession().removeAttribute("poster_id");
+        request.getSession().removeAttribute("poster_user");
+
 
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/views/tweets/userIndex.jsp");
         rd.forward(request, response);

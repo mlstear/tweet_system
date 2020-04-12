@@ -16,7 +16,7 @@
                 <tr>
                    <th>登録日時</th>
                    <td>
-                      <fmt:formatDate value="${tweet.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />
+                      <fmt:formatDate value="${tweet.created_at}" pattern="yyyy-MM-dd HH:mm" />
                    </td>
                 </tr>
                 <tr class="box1">
@@ -28,18 +28,18 @@
               </tbody>
            </table>
 
-           <p><a href="#" onclick="confirmDestroy();">削除</a></p>
-                  <form method="POST" action="<c:url value='/tweets/destroy' />">
-                    <input type="hidden" name="_token" value="${_token}" />
-                  </form>
-                  <script>
+
+               <p><a href="#" onclick="confirmDestroy();">削除 通常から</a></p>
+               <form method="POST" action="<c:url value='/tweets/destroy'/>">
+                 <input type="hidden" name="_token" value="${_token}" />
+               </form>
+               <script>
                       function confirmDestroy() {
                           if(confirm("本当に削除してよろしいですか？")) {
                               document.forms[0].submit();
                         }
                     }
                 </script>
-
          </c:when>
          <c:otherwise>
             <h2>お探しのデータは見つかりませんでした。</h2>

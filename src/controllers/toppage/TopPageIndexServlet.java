@@ -62,6 +62,8 @@ public class TopPageIndexServlet extends HttpServlet {
             request.getSession().removeAttribute("flush");
         }
 
+
+
         RequestDispatcher rd=request.getRequestDispatcher("/WEB-INF/views/topPage/topIndex.jsp");
         rd.forward(request, response);
     }

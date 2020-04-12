@@ -18,7 +18,7 @@
                  </td>
                  <td class="tweet_delete">
                     <c:if test="${sessionScope.login_poster.id==tweet.poster.id}">
-                       <a href="<c:url value='/tweets/show?id=${tweet.id}'/>">投稿を削除する</a>
+                       <a href="<c:url value='/tweets/userShow?id=${tweet.id}'/>">投稿を削除する</a>
                     </c:if>
                  </td>
               </tr>
