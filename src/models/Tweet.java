@@ -21,6 +21,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "getUserAllTweets",query = "SELECT t FROM Tweet AS t WHERE t.poster = :poster ORDER BY t.id DESC" ),
     @NamedQuery(name = "getUserTweetsCount",query = "SELECT COUNT(t) FROM Tweet AS t WHERE t.poster = :poster"),
 
+
 })
 
 @Entity

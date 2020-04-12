@@ -28,8 +28,8 @@
              </tbody>
           </table>
 
-          <p><a href="#" onclick="confirmDestroy();">削除 ユーザーから</a></p>
-               <form method="POST" action="<c:url value='/tweets/userDestroy'/>">
+          <p><a href="#" onclick="confirmDestroy();">削除 マイページから</a></p>
+               <form method="POST" action="<c:url value='/tweets/myDestroy'/>">
                  <input type="hidden" name="_token" value="${_token}" />
                </form>
                <script>
@@ -44,6 +44,6 @@
            <h2>お探しのデータは見つかりませんでした。</h2>
         </c:otherwise>
      </c:choose>
-     <p><a href="<c:url value='/tweets/userIndex?id=${sessionScope.poster_user.id}'/>">投稿一覧に戻る</a></p>
+     <p><a href="<c:url value='/tweets/myIndex?id=${sessionScope.login_poster.id}'/>">マイページ トップに戻る</a></p>
   </c:param>
 </c:import>

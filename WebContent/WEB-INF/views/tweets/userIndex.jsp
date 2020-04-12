@@ -3,6 +3,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="../layout/app.jsp">
    <c:param name="content">
+     <c:if test="${flush!=null}">
+        <div id="flush_success">
+           <c:out value="${flush}"></c:out>
+        </div>
+     </c:if>
      <h2><c:out value="${posterName}"/> さんの投稿一覧</h2>
 
      <table id="tweet_list">
@@ -33,7 +38,7 @@
                   <c:out value="${i}" />&nbsp;
                </c:when>
                <c:otherwise>
-                 <a href="<c:url value='/index.html?page=${i}' />"><c:out value="${i}" /></a>&nbsp;
+                 <a href="<c:url value='/tweets/userIndex?page=${i}' />"><c:out value="${i}" /></a>&nbsp;
                </c:otherwise>
             </c:choose>
          </c:forEach>
