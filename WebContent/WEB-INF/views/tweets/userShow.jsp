@@ -28,7 +28,7 @@
              </tbody>
           </table>
 
-          <p><a href="#" onclick="confirmDestroy();">削除 ユーザーから</a></p>
+          <p><a href="#" onclick="confirmDestroy();">削除</a></p>
                <form method="POST" action="<c:url value='/tweets/userDestroy'/>">
                  <input type="hidden" name="_token" value="${_token}" />
                </form>

@@ -22,7 +22,7 @@
                    <a href="<c:url value='/tweets/userIndex?id=${poster.id}'/>">このユーザーの投稿を見る</a>
                  </td>
                  <td>
-                   <a href="<c:url value='/posters/show?id=${poster.id}'/>">詳細を表示</a>
+                   <a href="<c:url value='/posters/show?id=${poster.id}'/>">詳細を表示(編集はこちら)</a>
                  </td>
                </tr>
             </c:forEach>

@@ -8,8 +8,9 @@
            <c:out value="${flush}"></c:out>
         </div>
      </c:if>
-     <h2>TOPページ　最新のtweet</h2>
-     <p><a href="<c:url value='/tweets/new'/>">新規tweetを投稿する</a></p>
+     <h2>TOPページ　最新のTweet</h2>
+     <p>「マイページ」にてユーザー情報の編集が可能です。</p>
+     <p><a href="<c:url value='/tweets/new'/>">新規Tweetを投稿する</a></p>
      <table id="tweet_list">
         <tbody>
           <c:forEach var="tweet" items="${tweets}" varStatus="status">

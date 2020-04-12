@@ -4,7 +4,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>tweet システム</title>
+        <title>Tweet システム</title>
         <link rel="stylesheet" href="<c:url value='/css/reset.css' />">
         <link rel="stylesheet" href="<c:url value='/css/style.css' />">
     </head>
@@ -12,7 +12,7 @@
     <div id ="wrapper">
       <div id ="header">
          <div id="header_menu">
-            <h1><a href="<c:url value='/'/>">tweet システム</a></h1>&nbsp;&nbsp;&nbsp;
+            <h1><a href="<c:url value='/'/>">Tweet システム</a></h1>&nbsp;&nbsp;&nbsp;
             <c:if test="${sessionScope.login_poster !=null}">
                <a href="<c:url value='/posters/index'/>">登録ユーザー 一覧</a>&nbsp;
             </c:if>

@@ -29,7 +29,7 @@
            </table>
 
 
-               <p><a href="#" onclick="confirmDestroy();">削除 通常から</a></p>
+               <p><a href="#" onclick="confirmDestroy();">削除</a></p>
                <form method="POST" action="<c:url value='/tweets/destroy'/>">
                  <input type="hidden" name="_token" value="${_token}" />
                </form>

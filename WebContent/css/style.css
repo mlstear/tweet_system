@@ -155,6 +155,7 @@ table#tweet_list th {
 table#tweet_list .tweet_name {
     width: 10%;
     padding: 10px 2%;
+    font-size: 20px;
 }
 table#tweet_list .tweet_created_at {
     width: 10%;
@@ -173,4 +174,7 @@ table#tweet_list .tweet_delete{
 }
 p a{
     font-size:18px;
+}
+p.page{
+    text-align:right
 }
